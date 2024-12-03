@@ -1,0 +1,30 @@
+﻿<Window x:Class="DVD6.ModifyDVDWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Modify DVD" Height="300" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Title:" Grid.Row="0" Margin="5"/>
+        <TextBox Text="{Binding ModifiedTitle, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Margin="5"/>
+
+        <TextBlock Text="Director:" Grid.Row="1" Margin="5"/>
+        <TextBox Text="{Binding ModifiedDirector, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Margin="5"/>
+
+        <TextBlock Text="Description:" Grid.Row="2" Margin="5"/>
+        <TextBox Text="{Binding ModifiedDescription, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Margin="5"/>
+
+        <!-- Ajoutez d'autres libellés et champs de texte pour d'autres propriétés modifiables si nécessaire -->
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="4" Margin="5">
+            <Button Content="Save" Click="SaveButton_Click" Margin="5"/>
+            <Button Content="Cancel" Click="CancelButton_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

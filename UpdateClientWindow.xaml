@@ -1,0 +1,22 @@
+﻿<Window x:Class="DVD6.UpdateClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Update Client" Height="300" Width="400">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="First Name:"/>
+            <TextBox x:Name="FirstNameTextBox"/>
+
+            <TextBlock Text="Last Name:"/>
+            <TextBox x:Name="LastNameTextBox"/>
+
+            <TextBlock Text="Address:"/>
+            <TextBox x:Name="AdresseTextBox"/>
+
+            <TextBlock Text="Phone Number:"/>
+            <TextBox x:Name="PhoneNumberTextBox"/>
+
+            <Button Content="Update" Click="UpdateButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

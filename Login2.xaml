@@ -1,0 +1,65 @@
+﻿<Window x:Class="DVD6.Login2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DVD6"
+        mc:Ignorable="d"
+        Title="Login2" Height="450" Width="400">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Background" Value="#63688F"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="20"
+                                Padding="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#89638F"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#222">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Margin="0 0 0 10">
+                <Label Content="Username" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" Foreground="White"/>
+                <TextBox x:Name="txtUsername"
+                         Width="300"
+                         Height="40"
+                         FontSize="16"
+                         Background="#333"
+                         Foreground="White"
+                         BorderThickness="0"
+                         Padding="10"/>
+            </StackPanel>
+
+            <StackPanel Margin="0 0 0 10">
+                <Label Content="Mot de passe" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" Foreground="White"/>
+                <PasswordBox x:Name="txtPassword"
+                             Width="300"
+                             Height="40"
+                             FontSize="16"
+                             Background="#333"
+                             Foreground="White"
+                             BorderThickness="0"
+                             Padding="10"/>
+            </StackPanel>
+
+            <Button Content="Connexion" Click="btnLogin_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
