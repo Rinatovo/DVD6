@@ -1,7 +1,7 @@
 ---
 
 # DVD 6  
-**DVD 6** est une application permettant de :  
+ DVD 6 est une application permettant de :  
 - Gérer la location de DVD.  
 - Ajouter, modifier et supprimer des clients.  
 - Enregistrer, suivre et gérer les DVD disponibles.  
